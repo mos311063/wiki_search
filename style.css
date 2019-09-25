@@ -4,14 +4,22 @@ body {
   background: #f2f2f2;
   font-family: 'Open Sans', sans-serif;
 }
-
+.header {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 90px;
+  align-items: center;
+}
 .search {
   width: 100%;
   position: relative;
   display: flex;
   justify-content: center;
-  height: 180px;
+  height: 50px;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .searchTerm {
@@ -27,9 +35,9 @@ body {
   outline: none;
   color: #9dbfaf;
 }
-/* 
-.searchTerm:focus {
-  width: 200px;
+
+/* .searchTerm:focus {
+  width: 220px;
 } */
 
 .searchTerm:focus {
@@ -46,4 +54,65 @@ body {
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@keyframes display {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+.result {
+  display: block;
+  box-sizing: border-box;
+  border: 0px solid #c9cc00;
+  background-color: white;
+  margin: 0 auto;
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+li {
+  list-style-type: none;
+  display: block;
+  margin-bottom: 10px;
+  padding: 15px 30px 5px 30px;
+  background-color: inherit;
+  opacity: 0;
+  animation: display 1s ease-in-out forwards;
+}
+.result:hover {
+  border-left: 5px solid #c9cc00;
+  box-shadow: inset 2px -2px 0 #c9cc00;
+}
+
+.box {
+  display: none;
+  width: 100%;
+}
+
+a:hover + .box,
+.box:hover {
+  animation: display 0.3s ease forwards;
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+.loading {
+  display: none;
+  justify-content: center;
 }
