@@ -1,12 +1,9 @@
 {
-  "name": "frontend_wiki",
+  "name": "project1",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
+  "description": "This example is so cool.",
+  "main": "web.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }
